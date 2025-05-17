@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="icon" type="image/x-icon" href="featured/Logo.png">
+    <link rel="stylesheet" href="/overallstyle.css">
+    <script type="module" src="login.js" defer></script>
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+.login-container {
+    background: rgba(255, 255, 255, 0.1); /* Fixed transparency */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+#login-form h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+#login-form input {
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 16px;
+}
+#login-form input::placeholder {
+    color: #e0e0e0;
+}
+#login-form button {
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#login-form button:hover {
+    background-color: #f0f0f0;
+}
+/* New Google button */
+#google-login {
+    background-color: #4285F4;
+    color: white;
+    margin-top: 10px;
+}
+#google-login:hover {
+    background-color: #357ae8;
+}
+</style>
+
+<body>
+
+<div class="login-container">
+    <form id="login-form">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" id="login-email" required>
+        <input type="password" placeholder="Password" id="login-password" required>
+        <button type="submit" id="login">Login</button>
+    </form>
+   
+</div>
+
+</body>
+</html>

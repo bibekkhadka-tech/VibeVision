@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VibeVision Production</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="icon" type="image/x-icon" href="featured/Logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/overallstyle.css">
+    <script src="/script.js"></script>
+
+    <style>
+        header {
+            background-color: rgb(114, 124, 163);
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            display: inline-block;
+
+
+            position: fixed;
+            top: 0;
+
+            opacity: 0.8;
+            font-family: Arial, Helvetica, sans-serif;
+            z-index: 999;
+            display: flex;
+            color: white;
+
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #7A8B99;
+
+            color: rgb(7, 7, 7);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+      
+
+        .left {
+
+            position: absolute;
+            left: 15px;
+            top: 8px;
+
+
+
+        }
+
+        img {
+            width: 80px;
+            border-radius: 20px;
+
+
+        }
+
+        .middle {
+
+            display: block;
+            width: 50%;
+            margin: 15px auto;
+        }
+
+        .menu {
+            display: inline-block;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 34px 20px;
+            font-size: 18px;
+        }
+
+        .menu li a:hover {
+
+            color: rgb(75, 75, 142);
+
+        }
+
+        .menu li a:active {
+            color: #ea48ed;
+
+        }
+
+        .right {
+
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            color: #f1d953;
+        }
+
+        main {
+            padding: 140px 40px 60px;
+            max-width: 1200px;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        main h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color:white;
+        }
+
+        main p {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 16px;
+            color: white;
+        }
+
+        /* Blog Cards */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            
+            justify-content: center;
+            align-content: center;
+            padding: 5px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+            width: 30%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-content h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .blog-content p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: rgb(114, 124, 163);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .read-more:hover {
+            background-color: red;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        footer {
+            background-color: rgb(76, 88, 135);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .footerleft,
+        .footerbottom,
+        .footermiddle,
+        .footerright {
+            margin: 10px;
+
+        }
+
+        .footerleft {
+            flex: 1;
+            min-width: 150px;
+            
+        }
+
+        .footerbottom {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .footerbottom  .tems-condition{
+            
+            margin-top: 90px;
+        }
+       .footerbottom  .tems-condition a{
+      
+        text-decoration: none;
+        color: white;
+        margin-top: 20px;
+       }
+
+        .footermiddle {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .footermiddle h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .footermiddle ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footermiddle ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .footermiddle ul li a:hover {
+            color: #dcd0ff;
+        }
+
+        .footerright {
+            min-width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footerright img {
+            width: 30px;
+            margin: 0 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 12px;
+            border-top: 1px solid #fff;
+            padding-top: 10px;
+        }
+
+        .copyright a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <a href="index.html"><img src="featured/Logo.png"></a>
+
+        </div>
+        <div class="middle">
+            <nav class="menu">
+                <ul type="none">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <p>🎬 Your Digital Partner</p>
+        </div>
+
+    </header>
+    <main>
+
+        <h1>Latest Blog Posts</h1>
+        <p>Explore insights, stories, and behind-the-scenes from Vibe Vision Production.</p>
+        <div class="container">
+            <div class="blog-card">
+                <img src="/featured/istockphoto-942659258-612x612.jpg" alt="Blog 1">
+                <div class="blog-content">
+                    <h3>Behind the Lens: Crafting Our Latest Project</h3>
+                    <p>Take a look at the creative process, from brainstorming to shooting and editing.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="/featured/images (1).jpeg" alt="Blog 2">
+                <div class="blog-content">
+                    <h3>Meet the Team: Passion Behind the Production</h3>
+                    <p>Get to know the passionate individuals who bring our vision to life.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="/featured/images.jpeg" alt="Blog 3">
+                <div class="blog-content">
+                    <h3>Tips for Creating an Engaging Digital CV</h3>
+                    <p>Learn how to impress with a visually dynamic and professional digital CV.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Floating Icon -->
+        <div id="chatbot-icon">💬</div>
+
+        <!-- Chatbot Container -->
+        <div id="chatbot-container" class="hidden">
+            <div id="chatbot-header">
+                <span>ChatBot</span>
+                <button id="close-btn">&times;</button>
+            </div>
+
+            <div id="chatbot-body">
+                <div id="chatbot-messages"></div>
+            </div>
+
+            <div id="chatbot-input-container">
+                <input type="text" id="chatbot-input" placeholder="Type a message..." />
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+
+    </main>
+</body>
+<footer id="footer">
+    <div class="footer-top">
+        <div class="footerleft">
+            <img src="featured/Logo.png" alt="Logo">
+            <p><strong>VibeVision Production</strong> is a creative film production company and Your digital partner.</p>
+        </div>
+
+        <div class="footerbottom">
+            <p>18/39 The Avenue, Hurstville, NSW</p>
+            <p>VibeVision production Pty. LTD</p>
+            <div class="tems-condition">
+                <a href="/privacy.html" title="privacy-policy">Privacy Policy</a>
+
+            </div>
+        </div>
+
+        <div class="footermiddle">
+            <h2>Quick Links</h2>
+            <ul type="none">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footerright">
+            <a href="https://www.instagram.com" target="_blank"><img src="featured/instagram icon.jpeg" alt="instagram"
+                    title="Navigate To Our Instagram"></a>
+            <a href="https://www.tiktok.com" target="_blank"> <img src="featured/tiktok.png" alt="Tiktok"
+                    title="Navigate To Our TIKTOK"></a>
+        </div>
+    </div>
+
+    <div class="copyright">
+            &copy; 2025 VibeVision Production. All rights reserved.</a>
+    </div>
+</footer>
+
+</html>

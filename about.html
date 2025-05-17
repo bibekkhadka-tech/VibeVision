@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VibeVision Production</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="icon" type="image/x-icon" href="featured/Logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/overallstyle.css">
+    <script src="/script.js"></script>
+
+    <style>
+        header {
+            background-color: rgb(114, 124, 163);
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            display: inline-block;
+
+
+            position: fixed;
+            top: 0;
+
+            opacity: 0.8;
+            font-family: Arial, Helvetica, sans-serif;
+            z-index: 999;
+            display: flex;
+
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #7A8B99;
+
+            color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+        main {
+            flex: 1;
+            /* Pushes the footer to the bottom */
+            margin-top: 90px;
+        }
+
+        .left {
+
+            position: absolute;
+            left: 15px;
+            top: 8px;
+
+
+
+        }
+
+        img {
+            width: 80px;
+            border-radius: 20px;
+            display: flex;
+
+
+        }
+
+        .middle {
+
+            display: block;
+            width: 50%;
+            margin: 15px auto;
+        }
+
+        .menu {
+            display: inline-block;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 34px 20px;
+            font-size: 18px;
+        }
+
+        .menu li a:hover {
+
+            color: rgb(75, 75, 142);
+
+        }
+
+        .menu li a:active {
+            color: #ea48ed;
+
+        }
+
+
+        .right {
+
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            color: #f1d953;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+            /* space below header */
+            padding: 30px;
+            flex-wrap: wrap;
+            /* makes it responsive on small screens */
+            gap: 30px;
+        }
+
+        .about-us {
+            flex: 1;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .about-us h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .about-us h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ceb941;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .aboutpicture {
+            flex: 1;
+            text-align: center;
+            filter: brightness(75%) saturate(140%)
+        }
+
+        .aboutpicture img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .mission-picture {
+            flex: 1;
+            text-align: center;
+            filter: brightness(75%) saturate(140%)
+        }
+
+        .mission-picture img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .mission-text {
+            flex: 1;
+            max-width: 500px;
+            text-align: center;
+        }
+
+
+
+        .mission-text h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ceb941;
+        }
+
+        .mission-text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .story-text {
+            flex: 1;
+            max-width: 500px;
+            text-align: center;
+        }
+
+
+
+        .story-text h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ceb941;
+        }
+
+        .story-text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .story-picture {
+            flex: 1;
+            text-align: center;
+        }
+
+        .story-picture img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            filter: brightness(75%) saturate(140%)
+        }
+
+
+
+
+
+
+
+
+
+
+        footer {
+            background-color: rgb(76, 88, 135);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .footerleft,
+        .footerbottom,
+        .footermiddle,
+        .footerright {
+            margin: 10px;
+
+        }
+
+        .footerleft {
+            flex: 1;
+            min-width: 150px;
+            
+        }
+
+        .footerbottom {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .footerbottom  .tems-condition{
+            
+            margin-top: 90px;
+        }
+       .footerbottom  .tems-condition a{
+      
+        text-decoration: none;
+        color: white;
+        margin-top: 20px;
+       }
+
+        .footermiddle {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .footermiddle h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .footermiddle ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footermiddle ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .footermiddle ul li a:hover {
+            color: #dcd0ff;
+        }
+
+        .footerright {
+            min-width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footerright img {
+            width: 30px;
+            margin: 0 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 12px;
+            border-top: 1px solid #fff;
+            padding-top: 10px;
+        }
+
+        .copyright a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <a href="index.html"><img src="featured/Logo.png"></a>
+
+        </div>
+        <div class="middle">
+            <nav class="menu">
+                <ul type="none">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <p>🎬 Your Digital Partner</p>
+        </div>
+
+    </header>
+    <main>
+        <section class="about-container">
+            <div class="about-us">
+                <h1>About US</h1>
+                <h2>We are Vibe Vision Production</h2>
+                <p>Where every frame tells a deeper story — blending emotion, art, and imagination into cinematic gold.
+                </p>
+            </div>
+            <aside class="aboutpicture">
+                <img src="/featured/aboutus.jpg" alt="About Us Picture">
+            </aside>
+        </section>
+        <section class="about-container">
+
+            <div class="mission-picture">
+                <img src="/featured/mission.jpeg" alt="vission and Mission">
+            </div>
+            <aside class="mission-text">
+                <h2> 🎯Our Vision and Mission</h2>
+                <p>At <strong>VibeVision Production</strong> , our vision is to inspire emotions and ignite imagination
+                    through every
+                    frame we create.</p>
+                <p>We are on a mission to craft visually stunning and emotionally powerful stories that connect,
+                    empower, and leave a lasting impact on every audience we reach.</p>
+            </aside>
+        </section>
+        <section class="about-container">
+            <div class="story-text">
+
+                <h2> 🎬Our Story</h2>
+                <p>VibeVision Production was founded with a single purpose — to transform emotions into powerful
+                    visuals. What began as a creative spark has grown into a passionate pursuit of storytelling, where
+                    every frame speaks, inspires, and connects.
+                </p>
+            </div>
+            <aside class="story-picture">
+                <img src="/featured/ourstory.jpg" alt="Our Story Picture">
+            </aside>
+
+            <!-- Floating Icon -->
+            <div id="chatbot-icon">💬</div>
+
+            <!-- Chatbot Container -->
+            <div id="chatbot-container" class="hidden">
+                <div id="chatbot-header">
+                    <span>ChatBot</span>
+                    <button id="close-btn">&times;</button>
+                </div>
+
+                <div id="chatbot-body">
+                    <div id="chatbot-messages"></div>
+                </div>
+
+                <div id="chatbot-input-container">
+                    <input type="text" id="chatbot-input" placeholder="Type a message..." />
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+
+
+
+
+    </main>
+</body>
+<footer id="footer">
+    <div class="footer-top">
+        <div class="footerleft">
+            <img src="featured/Logo.png" alt="Logo">
+            <p><strong>VibeVision Production</strong> is a creative film production company and Your digital partner.</p>
+        </div>
+
+        <div class="footerbottom">
+            <p>18/39 The Avenue, Hurstville, NSW</p>
+            <p>VibeVision production Pty. LTD</p>
+            <div class="tems-condition">
+                <a href="/privacy.html" title="privacy-policy">Privacy Policy</a>
+
+            </div>
+        </div>
+
+        <div class="footermiddle">
+            <h2>Quick Links</h2>
+            <ul type="none">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footerright">
+            <a href="https://www.instagram.com" target="_blank"><img src="featured/instagram icon.jpeg" alt="instagram"
+                    title="Navigate To Our Instagram"></a>
+            <a href="https://www.tiktok.com" target="_blank"> <img src="featured/tiktok.png" alt="Tiktok"
+                    title="Navigate To Our TIKTOK"></a>
+        </div>
+    </div>
+
+    <div class="copyright">
+            &copy; 2025 VibeVision Production. All rights reserved.</a>
+    </div>
+</footer>
+
+</html>
